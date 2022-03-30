@@ -2,10 +2,11 @@ FROM node:16.13.2
 
 WORKDIR /usr/src/ecs-app
 
-COPY ./pakcage.json .
+COPY ./package.json .
+
 COPY ./package-lock.json .
 
-RUN npm run install
+RUN npm install
 
 COPY . .
 
